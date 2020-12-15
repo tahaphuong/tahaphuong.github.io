@@ -992,7 +992,7 @@ a, button {
 }
 
 .work-showcase-webapp-img {
-  width: 46.15vw;
+  width: 46.125vw;
   height: 27vw;
   border-left: 0.05vw solid #bebebe;
   border-bottom: 0.05vw solid #bebebe;
@@ -1632,6 +1632,7 @@ a, button {
   }
   .work-showcase-artworks img {
     width: 100%;
+    height: auto;
   }
   .work-showcase-artworks-pallete {
     display: none;

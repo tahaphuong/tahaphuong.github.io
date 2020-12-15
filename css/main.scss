@@ -823,7 +823,7 @@ a, button {
 }
 
 .work-showcase-webapp-img {
-  width: ($mainWidth - $thinLine*2)/2;
+  width: ($mainWidth - $thinLine*3)/2;
   height: 27vw;
   
   border-left: $thinLine solid $lightGray;
@@ -1536,6 +1536,7 @@ $quoteSectionHeight: 30vw;
   // showcase artwork 
   .work-showcase-artworks img {
     width: 100%;
+    height: auto;
   }
   .work-showcase-artworks-pallete {
     display: none;
