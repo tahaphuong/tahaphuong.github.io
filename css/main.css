@@ -1632,7 +1632,7 @@ a, button {
   }
   .work-showcase-artworks img {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
   .work-showcase-artworks-pallete {
     display: none;
