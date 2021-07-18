@@ -222,7 +222,7 @@
         break;
         case 'contact': 
           chooseNav('contact');
-          document.getElementById("link-cv").innerHTML = 'mein Lebenslauf besuchen (pdf)';
+          document.getElementById("link-cv").innerHTML = 'mein Lebenslauf (pdf)';
         break;
         default: 
           console.log('scroll error')
