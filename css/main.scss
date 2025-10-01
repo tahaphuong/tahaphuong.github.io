@@ -9,7 +9,7 @@
 // home-img filter -2 (under home-img)
 
 
-// font style 
+// font style
 $fontDisplay: 'Prata', 'serif';
 
 // Colors
@@ -41,7 +41,7 @@ $paddingButton: 0.3em 1em;
 $thinLine: 0.05vw;
 
 
-// Font sizes 
+// Font sizes
 $fontSmall: calc(1vw + 2px);
 $fontSemi: calc(1.5vw + 2px);
 $fontSemiBig: calc(2vw + 2px);
@@ -113,7 +113,7 @@ a, button {
   display: none;
 }
 
-// animation 
+// animation
 
 @keyframes loadingPage {
   0% {color: $pink;}
@@ -220,7 +220,7 @@ a, button {
   background-color: transparent;
 }
 
-// hide elements 
+// hide elements
 #quote>div, #work>div, #about>div, #contact div {
   opacity: 0;
 }
@@ -417,7 +417,7 @@ a, button {
 }
 
 .home-click-on-it {
-  opacity: 0;
+  opacity: 1;
   margin-top: 1em;
 
   font-size: $fontSmall;
@@ -436,7 +436,7 @@ a, button {
 
   border-radius: 50%;
   background-color: $yellow;
-  
+
   position: absolute;
   z-index: -5;
 
@@ -553,7 +553,7 @@ a, button {
   height: $quoteSectionHeight;
   position: relative;
   z-index: 0;
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -566,7 +566,7 @@ a, button {
 
 .quote .quote-img-hand {
   height: $quoteSectionHeight;
-  
+
   position: absolute;
   z-index: 5;
   left: 0;
@@ -674,7 +674,7 @@ a, button {
 .work-main {
   width: 100%;
   margin-top: $marginStandard;
-  
+
   border-top: $thinLine solid $lightGray;
   border-bottom: $thinLine solid $lightGray;
 
@@ -758,9 +758,9 @@ a, button {
 .work-showcase-artworks-copied {
   opacity: 0;
 
-  position: relative; 
+  position: relative;
   bottom: 0.5vw;
-  
+
   font-size: $fontSmall;
   color: $lightGray;
   letter-spacing: -0.05em;
@@ -784,7 +784,7 @@ a, button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-} 
+}
 
 
 .work-showcase-artworks-color-name {
@@ -825,7 +825,7 @@ a, button {
 .work-showcase-webapp-img {
   width: ($mainWidth - $thinLine*3)/2;
   height: 27vw;
-  
+
   border-left: $thinLine solid $lightGray;
   border-bottom: $thinLine solid $lightGray;
 
@@ -844,7 +844,7 @@ a, button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
   font-size: $fontSmall;
   letter-spacing: -0.04em;
   text-align: center;
@@ -894,7 +894,7 @@ a, button {
 }
 
 
-// showcase react native 
+// showcase react native
 .work-showcase-mobile {
   display: flex
 }
@@ -946,7 +946,7 @@ a, button {
   flex-direction: column;
 }
 
-.work-skills .work-skills-title {  
+.work-skills .work-skills-title {
   position: relative;
   z-index: 1;
 
@@ -1018,7 +1018,7 @@ a, button {
   left: 0.4em;
 }
 
-// about main part 
+// about main part
 
 .about-main {
   width: 100%;
@@ -1063,7 +1063,7 @@ a, button {
 .contact-title {
   cursor: pointer;
   padding-left: $marginStandard;
-  
+
   font-family: $fontDisplay;
   font-size: $fontSemiBigger;
 
@@ -1103,7 +1103,7 @@ a, button {
 
 .contact-block {
   margin-top: $marginStandard*0.5;
-  
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1142,7 +1142,7 @@ a, button {
 .contact-circle {
   height: 12vw;
   width: 12vw;
-  
+
   border-radius: 50%;
   background-color: $pink;
 
@@ -1301,7 +1301,7 @@ $paddingButton: 0.3em 1em;
 $thinLineM: 0.1vw;
 
 
-// Font sizes 
+// Font sizes
 $fontSmallM: 4vw;
 $fontSemiM: 5vw;
 $fontSemiBigM: 6.5vw;
@@ -1319,7 +1319,7 @@ $doublequotesWidth: 7vw;
 $quoteSectionHeight: 30vw;
 
 
-  // hide components from desktop version 
+  // hide components from desktop version
   .nav {
     display: none;
   }
@@ -1385,13 +1385,13 @@ $quoteSectionHeight: 30vw;
     font-size: $fontSmallM*0.75;
   }
 
-  
-  .home-circle-2>div {  
+
+  .home-circle-2>div {
     opacity: 0;
     width: 100%;
     height: 100%;
     border-radius: 50%;
-      
+
     margin: 0;
     padding: 0;
 
@@ -1432,10 +1432,7 @@ $quoteSectionHeight: 30vw;
 
     font-size: $fontSemiM;
   }
-  .home-click-on-it {
-    opacity: 1 !important;
-    font-size: $fontSmallM;
-  }
+
 
 
   // home img
@@ -1454,10 +1451,10 @@ $quoteSectionHeight: 30vw;
   .home-img .home-img-filter .home-img-filter-1 {
     height: $imgHomeWidthM*0.5;
     width: $imgHomeWidthM*0.5;
-  
+
   }
 
-  // .quote part 
+  // .quote part
 
   .quote {
     margin-top: 40vw;
@@ -1489,7 +1486,7 @@ $quoteSectionHeight: 30vw;
 
     align-items: flex-start;
     text-align: center;
-    
+
     font-size: $fontSemiBiggerM;
   }
 
@@ -1498,7 +1495,7 @@ $quoteSectionHeight: 30vw;
     margin-top: 0;
   }
 
-  // work 
+  // work
   .work {
     margin-top: 0;
   }
@@ -1533,7 +1530,7 @@ $quoteSectionHeight: 30vw;
     display: none;
   }
 
-  // showcase artwork 
+  // showcase artwork
   .work-showcase-artworks img {
     width: 100%;
     height: 100%;
@@ -1571,7 +1568,7 @@ $quoteSectionHeight: 30vw;
     letter-spacing: -0.05em;
   }
 
-  // showcase react native 
+  // showcase react native
   .work-showcase-mobile {
     display: flex;
     flex-direction: column;
@@ -1599,7 +1596,7 @@ $quoteSectionHeight: 30vw;
     padding: 15vw $marginStandardM;
 
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
   }
   .work-skills .work-skills-title {
     text-align: left;
@@ -1644,7 +1641,7 @@ $quoteSectionHeight: 30vw;
     letter-spacing: -0.05em;
   }
 
-  // contact mobile 
+  // contact mobile
   .contact {
     min-height: 100vw;
     margin-top: 40vw;
@@ -1671,18 +1668,18 @@ $quoteSectionHeight: 30vw;
     cursor: pointer;
     height: 30vw;
     width: 30vw;
-    
+
     border-radius: 50%;
     background-color: rgba($blue, 0.5);
-    
+
     display: block;
     position: absolute;
     z-index: 10;
     left: -15vw;
-  
+
     margin-top: -10vw;
   }
-  
+
   .contact-circle-2:active {
     margin-top: -5vw;
   }
@@ -1731,7 +1728,7 @@ $quoteSectionHeight: 30vw;
     transform: scale(1.2);
   }
 
-  // nav-mobile 
+  // nav-mobile
   .nav-mobile {
     width: 100vw;
     height: 100vh;

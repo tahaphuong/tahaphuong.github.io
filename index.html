@@ -1,30 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Prata&display=swap" rel="stylesheet">
-  <!-- <link href="//db.onlinewebfonts.com/c/821953e3b7b6281fcb7e26edec546f29?family=ATC+Arquette+1_5_17" rel="stylesheet" type="text/css"/> -->
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="./data.js"></script>
+  <script src="./index.js"></script>
   <link href="./css/main.css" rel="stylesheet">
   <link rel="icon" href="./img/type.png">
   <title>Phuong Ta</title>
 </head>
+
 <body>
   <div class="load" id="load" style="opacity: 1">
     <div class="load-title">play with the <span class="load-color">COLOR</span></div>
     <div class="load-sub-title">loading . . .</div>
   </div>
 
-  
+
   <div id="rain" style="position: fixed;">
   </div>
 
   <div class="nav">
-    <div class="nav-block" onclick="navScroll('home')"><span class="nav-ball" id="nav-ball-home" style="opacity: 1;"></span><p>home</p></div>
-    <div class="nav-block" onclick="navScroll('work')"><span class="nav-ball" id="nav-ball-work" style="opacity: 0;"></span><p>work</p></div>
-    <div class="nav-block" onclick="navScroll('about')"><span class="nav-ball" id="nav-ball-about" style="opacity: 0;"></span><p>about</p></div>
-    <div class="nav-block" onclick="navScroll('contact')"><span class="nav-ball" id="nav-ball-contact" style="opacity: 0;"></span><p>contact</p></div>
+    <div class="nav-block" onclick="navScroll('home')"><span class="nav-ball" id="nav-ball-home"
+        style="opacity: 1;"></span>
+      <p>home</p>
+    </div>
+    <div class="nav-block" onclick="navScroll('work')"><span class="nav-ball" id="nav-ball-work"
+        style="opacity: 0;"></span>
+      <p>work</p>
+    </div>
+    <div class="nav-block" onclick="navScroll('about')"><span class="nav-ball" id="nav-ball-about"
+        style="opacity: 0;"></span>
+      <p>about</p>
+    </div>
+    <div class="nav-block" onclick="navScroll('contact')"><span class="nav-ball" id="nav-ball-contact"
+        style="opacity: 0;"></span>
+      <p>contact</p>
+    </div>
   </div>
 
   <div class="nav-mobile" id="nav-mobile" style="display: none; height: 0vh">
@@ -36,14 +53,22 @@
     <div class="nav-mobile-opt nav-mobile-opt-4" onclick="navScroll('contact')">contact</div>
 
     <div class="link-cv-con">
-      <a class="link-cv" target="_blank" href="https://drive.google.com/file/d/1ifTjSGmkWRRF_ZQPkD5QB4cYZsaHAhsZ/view?usp=sharing"><ion-icon name="link-outline" style="transform: translate(0, 0.25em);"></ion-icon> see my CV</a>
+      <a class="link-cv" target="_blank"
+        href="https://drive.google.com/file/d/1ifTjSGmkWRRF_ZQPkD5QB4cYZsaHAhsZ/view?usp=sharing">
+        <ion-icon name="link-outline" style="transform: translate(0, 0.25em);"></ion-icon> see my CV
+      </a>
     </div>
   </div>
-  <div class="hamburger" onclick="toggleNavMobile()"><ion-icon name="reorder-two-outline"></ion-icon></div>
+  <div class="hamburger" onclick="toggleNavMobile()">
+    <ion-icon name="reorder-two-outline"></ion-icon>
+  </div>
 
   <div class="link">
     <div>
-      <a class="link-cv" id="link-cv" target="_blank" href="https://drive.google.com/file/d/1ifTjSGmkWRRF_ZQPkD5QB4cYZsaHAhsZ/view?usp=sharing" onmouseover="textAppearsOnHover('link-cv-click-on-it')" onmouseout="textDisappearsOutHover('link-cv-click-on-it')">my CV</a>
+      <a class="link-cv" id="link-cv" target="_blank"
+        href="https://drive.google.com/file/d/1ifTjSGmkWRRF_ZQPkD5QB4cYZsaHAhsZ/view?usp=sharing"
+        onmouseover="textAppearsOnHover('link-cv-click-on-it')"
+        onmouseout="textDisappearsOutHover('link-cv-click-on-it')">my CV</a>
       <span id="link-cv-click-on-it" style="opacity: 0">click to see my CV in a new tab</span>
     </div>
     <div class="link-logo">phuon.</div>
@@ -55,39 +80,49 @@
       <div class="home-header">
         <div class="home-pre-title">oh you found me,</div>
         <div class="home-languages">
-          <div><a id="english" style="border-bottom: 1px solid black;">EN</a></div>
-          <div><a id="deutsch" href="de.html">DE</a></div>
+          <div><span onclick="chooseLanguage('en')" style="border-bottom: 1px solid black;">EN</span></div>
+          <div style="width: 20px"></div>
+          <div><span onclick="chooseLanguage('de')" >DE</span></div>
         </div>
       </div>
 
-      <div class="home-title">i'm Phuong Ta!</div>
+      <div class="home-title">i'm Ha-Phuong Ta!</div>
 
       <div class="home-sub-title-con">
         <div class="home-sub-title">
-          ...can be called Julie, a newb coder coming from Vietnam<br>
-          <span class="home-title-highlight" id="home-title-highlight" onclick="falling()" onmouseover="textAppearsOnHover('home-click-on-it')" onmouseout="textDisappearsOutHover('home-click-on-it')">a (front-end) developer-wannabe.</span>
+          ...an enthusiastic coder, an IT student<br>
+          <span class="home-title-highlight" id="home-title-highlight" onclick="falling()">and a software engineer-wannabe.</span>
         </div>
-        <div class="home-click-on-it" id="home-click-on-it"><ion-icon name="arrow-up-outline"></ion-icon> click on it! </div>
+        <div class="home-click-on-it">
+          <ion-icon name="arrow-up-outline"></ion-icon> click on it!
+        </div>
       </div>
 
       <div class="home-img">
         <div class="home-img-filter">
           <div class="home-img-filter-1"></div>
         </div>
-        <img src="./img/ava-bw.jpg"/>
+        <img src="./img/ava-bw.jpg" />
       </div>
 
       <div class="home-circle" id="home-circle"></div>
-      <div class="home-circle-2"><div><p>hello! try interacting w' all <b>COLORS</b> on this page!</p></div></div>
+      <div class="home-circle-2">
+        <div>
+          <p>hello! try interacting w' all <b>COLORS</b> on this page!</p>
+        </div>
+      </div>
     </div>
 
 
     <div id="quote" class="quote">
       <div class="quote-img-hand">
-        <img src="./img/hand2.png" id="quote-hand-img"/>
-        <span class="quote-doublequotes" id="quote-doublequotes" onclick="changeColorOnClick('quote-doublequotes', 'quote-doublequotes')">,,</span>
+        <img src="./img/hand2.png" id="quote-hand-img" />
+        <span class="quote-doublequotes" id="quote-doublequotes"
+          onclick="changeColorOnClick('quote-doublequotes', 'quote-doublequotes')">,,</span>
       </div>
-      <div class="quote-text"><p>Always looking for something new. <br>And be smart-working.</p></div>
+      <div class="quote-text">
+        <p>Always looking for something new. <br>And be smart-working.</p>
+      </div>
     </div>
 
     <div id="work" class="work">
@@ -98,25 +133,30 @@
 
       <div class="work-intro">
         Here are some of my (pet) projects.
-        <br>Check out my <a target="_blank" href="https://github.com/tahaphuong"> github <ion-icon name="link-outline" style="transform: translate(0, 0.25em);"></ion-icon></a> find out more.
+        <br>Check out my <a target="_blank" href="https://github.com/tahaphuong"> github <ion-icon name="link-outline"
+            style="transform: translate(0, 0.25em);"></ion-icon></a> to find out more.
       </div>
 
       <div class="work-main" id="work-main">
-        <div class="work-main-block" onclick="workBlockOnclick('artwork-title')" onmouseover="workBlockOnhover('artwork-title')" onmouseout="workBlockOuthover('artwork-title')">
+        <div class="work-main-block" onclick="workBlockOnclick('artwork-title')"
+          onmouseover="workBlockOnhover('artwork-title')" onmouseout="workBlockOuthover('artwork-title')">
           <div class="work-main-block-title" id="artwork-title" style="background-position: -100%;">Artwork design</div>
           <div class="work-main-block-des">For my English club at high school.</div>
         </div>
 
-        <div class="work-main-block" onclick="workBlockOnclick('webapp-title')" onmouseover="workBlockOnhover('webapp-title')" onmouseout="workBlockOuthover('webapp-title')">
-            <div class="work-main-block-title" id="webapp-title">Web app</div>
-            <div class="work-main-block-des">HTML/CSS/JS, MVC model, Firebase</div>
+        <div class="work-main-block" onclick="workBlockOnclick('webapp-title')"
+          onmouseover="workBlockOnhover('webapp-title')" onmouseout="workBlockOuthover('webapp-title')">
+          <div class="work-main-block-title" id="webapp-title">Web app</div>
+          <div class="work-main-block-des">HTML/CSS/JS, MVC model, Firebase</div>
         </div>
 
-        <div class="work-main-block" onclick="workBlockOnclick('staticweb-title')" onmouseover="workBlockOnhover('staticweb-title')" onmouseout="workBlockOuthover('staticweb-title')">
+        <div class="work-main-block" onclick="workBlockOnclick('staticweb-title')"
+          onmouseover="workBlockOnhover('staticweb-title')" onmouseout="workBlockOuthover('staticweb-title')">
           <div class="work-main-block-title" id="staticweb-title">Static websites</div>
           <div class="work-main-block-des">HTML/CSS and JS for small functions</div>
         </div>
-        <div class="work-main-block" onclick="workBlockOnclick('mobile-title')" onmouseover="workBlockOnhover('mobile-title')" onmouseout="workBlockOuthover('mobile-title')">
+        <div class="work-main-block" onclick="workBlockOnclick('mobile-title')"
+          onmouseover="workBlockOnhover('mobile-title')" onmouseout="workBlockOuthover('mobile-title')">
           <div class="work-main-block-title" id="mobile-title">Mobile</div>
           <div class="work-main-block-des">Javascript, Firebase</div>
         </div>
@@ -128,44 +168,50 @@
 
             <div class="work-showcase-artworks-color">
               <div class="skip work-showcase-artworks-copied">copied</div>
-              <div class="skip work-showcase-artworks-color-ball" onclick="copyOnClick('f0e2d3', this)" style="background-color: #f0e2d3"></div>
+              <div class="skip work-showcase-artworks-color-ball" onclick="copyOnClick('f0e2d3', this)"
+                style="background-color: #f0e2d3"></div>
               <div class="work-showcase-artworks-color-name" onclick="copyOnClick('f0e2d3', this)">f0e2d3</div>
             </div>
 
             <div class="work-showcase-artworks-color">
               <div class="skip work-showcase-artworks-copied">copied</div>
-              <div class="skip work-showcase-artworks-color-ball" onclick="copyOnClick('f3ceb4', this)" style="background-color: #f3ceb4"></div>
+              <div class="skip work-showcase-artworks-color-ball" onclick="copyOnClick('f3ceb4', this)"
+                style="background-color: #f3ceb4"></div>
               <div class="work-showcase-artworks-color-name" onclick="copyOnClick('f3ceb4', this)">f3ceb4</div>
             </div>
-            
+
             <div class="work-showcase-artworks-color">
               <div class="skip work-showcase-artworks-copied">copied</div>
-              <div class="skip work-showcase-artworks-color-ball" onclick="copyOnClick('ffdecf', this)" style="background-color: #ffdecf"></div>
+              <div class="skip work-showcase-artworks-color-ball" onclick="copyOnClick('ffdecf', this)"
+                style="background-color: #ffdecf"></div>
               <div class="work-showcase-artworks-color-name" onclick="copyOnClick('ffdecf', this)">ffdecf</div>
             </div>
-            
+
           </div>
-          <img src="./img/artworks.jpg"/>
+          <img src="./img/artworks.jpg" />
 
 
           <div class="work-showcase-artworks-pallete">
-            
+
 
             <div class="work-showcase-artworks-color">
               <div class="skip work-showcase-artworks-copied">copied</div>
-              <div class="skip work-showcase-artworks-color-ball" onclick="copyOnClick('e4d9b4', this)" style="background-color: #e4d9b4"></div>
+              <div class="skip work-showcase-artworks-color-ball" onclick="copyOnClick('e4d9b4', this)"
+                style="background-color: #e4d9b4"></div>
               <div class="work-showcase-artworks-color-name" onclick="copyOnClick('e4d9b4', this)">e4d9b4</div>
             </div>
 
             <div class="work-showcase-artworks-color">
               <div class="skip work-showcase-artworks-copied">copied</div>
-              <div class="skip work-showcase-artworks-color-ball" onclick="copyOnClick('c9b998', this)" style="background-color: #c9b998"></div>
+              <div class="skip work-showcase-artworks-color-ball" onclick="copyOnClick('c9b998', this)"
+                style="background-color: #c9b998"></div>
               <div class="work-showcase-artworks-color-name" onclick="copyOnClick('c9b998', this)">c9b998</div>
             </div>
 
             <div class="work-showcase-artworks-color">
               <div class="skip work-showcase-artworks-copied">copied</div>
-              <div class="skip work-showcase-artworks-color-ball" onclick="copyOnClick('8f9072', this)" style="background-color: #8f9072"></div>
+              <div class="skip work-showcase-artworks-color-ball" onclick="copyOnClick('8f9072', this)"
+                style="background-color: #8f9072"></div>
               <div class="work-showcase-artworks-color-name" onclick="copyOnClick('8f9072', this)">8f9072</div>
             </div>
 
@@ -175,7 +221,9 @@
       </div>
 
       <div class="work-skills">
-        <div class="work-skills-title"><div>skills</div></div>
+        <div class="work-skills-title">
+          <div>skills</div>
+        </div>
         <div class="work-skills-main">
           <div class="work-skills-main-1">
             <div>HTML/CSS</div>
@@ -201,52 +249,71 @@
       <div class="about-main">
         <div class="about-main-block">
           <div class="about-main-block-ques">Why do I choose IT?</div>
-          <div class="about-main-block-ans">At first, I participated in a Javascript crash course just because I wanted to try something new. It was much more fascinating than I thought. So I decided to go for IT.</div>
+          <div class="about-main-block-ans">At first, I participated in a Javascript crash course just because I wanted
+            to try something new. It was much more fascinating than I thought. So I decided to go for IT.</div>
         </div>
 
         <div class="about-main-block" style="text-align: right;">
           <div class="about-main-block-ques">My hobbies?</div>
-  
-  
-          <div class="about-main-block-ans">Music, in general. I like <a id="soundcloud-link" target="_blank" class="about-main-block-link" href="https://soundcloud.com/t-h-ph-ng"><ion-icon name="link-outline" style="transform: translate(0, 0.25em);"></ion-icon> playing the piano, singing and composing songs. <span id="soundcloud-ball" class="pointBallBig">visit my Soundcloud</span></a></div>
-          
+
+
+          <div class="about-main-block-ans">Music, in general. I like <a id="soundcloud-link" target="_blank"
+              class="about-main-block-link" href="https://soundcloud.com/t-h-ph-ng">
+              <ion-icon name="link-outline" style="transform: translate(0, 0.25em);"></ion-icon> playing the piano,
+              singing and composing songs. <span id="soundcloud-ball" class="pointBallBig">visit my Soundcloud</span>
+            </a></div>
+
         </div>
 
         <div class="about-main-block">
           <div class="about-main-block-ques">About extracurricular activities?</div>
-          <div class="about-main-block-ans">At high school I was the leader of <a id="hec-link" target="_blank" class="about-main-block-link" href="https://www.facebook.com/pg/HSGSEnglishClub/photos/?tab=album&album_id=1570739006326073"><ion-icon name="link-outline" style="transform: translate(0, 0.25em);"></ion-icon> my school's English club <span id="hec-ball" class="pointBallBig">visit the club's Facebook</span></a>. The team and I held many activities for the members of our club as well as the students at our school. Our biggest annual event is English Celebration, which includes a lot of interesting activities relating to the English language and the Western culture.</div>
-          
+          <div class="about-main-block-ans">At high school I was the leader of <a id="hec-link" target="_blank"
+              class="about-main-block-link"
+              href="https://www.facebook.com/pg/HSGSEnglishClub/photos/?tab=album&album_id=1570739006326073">
+              <ion-icon name="link-outline" style="transform: translate(0, 0.25em);"></ion-icon> my school's English
+              club <span id="hec-ball" class="pointBallBig">visit the club's Facebook</span>
+            </a>. The team and I held many activities for the members of our club as well as the students at our school.
+            Our biggest annual event is English Celebration, which includes a lot of interesting activities relating to
+            the English language and the Western culture.</div>
+
         </div>
 
-        <div class="about-main-block"  style="text-align: right;">
+        <div class="about-main-block" style="text-align: right;">
           <div class="about-main-block-ques">About the foreign languages?</div>
-          <div class="about-main-block-ans">I can speak English and German (intermediate level). I'm planing to learn some languages more, after having a good command of those two languages.</div>
+          <div class="about-main-block-ans">I can speak English and German (intermediate level). I'm planing to learn
+            some languages more, after having a good command of those two languages.</div>
         </div>
       </div>
 
     </div>
 
-    <div id="contact" class="contact"> 
+    <div id="contact" class="contact">
 
       <div onclick="scrollToTop()" class="skip contact-circle" style="opacity: 1;">↑ scroll top</div>
 
       <div class="contact-title">
         <div class="contact-title-text">Thank you for visiting!</div>
-        <div class="contact-title-highlight"></div> 
+        <div class="contact-title-highlight"></div>
       </div>
 
       <div class="contact-main">
-        
+
         <div class="contact-block">
           <div class="skip work-showcase-artworks-copied">copied</div>
-          <div class="contact-block-info" onclick="copyOnClick('phuonghata20012001@gmail.com', this)">phuonghata20012001@gmail.com</div>
-          <a target="_blank" href="mailto:phuonghata20012001@gmail.com" class="contact-block-title"><div>→ send me email</div></a>
+          <div class="contact-block-info" onclick="copyOnClick('phuonghata20012001@gmail.com', this)">
+            phuonghata20012001@gmail.com</div>
+          <a target="_blank" href="mailto:phuonghata20012001@gmail.com" class="contact-block-title">
+            <div>→ send me email</div>
+          </a>
         </div>
 
         <div class="contact-block" style="margin-left: 20vw">
           <div class="skip work-showcase-artworks-copied">copied</div>
-          <div class="contact-block-info" onclick="copyOnClick('www.github.com/tahaphuong/', this)">github.com/tahaphuong/</div>
-          <a target="_blank" href="https://www.github.com/tahaphuong/" class="contact-block-title"><div>→ visit github</div></a>
+          <div class="contact-block-info" onclick="copyOnClick('www.github.com/tahaphuong/', this)">
+            github.com/tahaphuong/</div>
+          <a target="_blank" href="https://www.github.com/tahaphuong/" class="contact-block-title">
+            <div>→ visit github</div>
+          </a>
         </div>
 
         <div class="contact-block" style="margin-left: 40vw">
@@ -255,14 +322,8 @@
           <a target="_blank" href="https://www.linkedin.com/in/ha-phuong-ta/" class="contact-block-title"><div>→ linkedin</div></a>
         </div>
       </div>
-
       <div class="skip contact-circle-2" style="opacity: 1;"></div>
-
     </div>
   </div>
-
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="./index.js"></script>
-<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js" type="module"></script>
 </html>

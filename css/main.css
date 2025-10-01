@@ -595,7 +595,7 @@ a, button {
 }
 
 .home-click-on-it {
-  opacity: 0;
+  opacity: 1;
   margin-top: 1em;
   font-size: calc(1vw + 2px);
   color: #bebebe;
@@ -1538,10 +1538,6 @@ a, button {
   .home-sub-title {
     width: 100%;
     font-size: 5vw;
-  }
-  .home-click-on-it {
-    opacity: 1 !important;
-    font-size: 4vw;
   }
   .home-img {
     top: -84vw;
