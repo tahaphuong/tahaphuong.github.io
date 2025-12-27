@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      overflow: hidden;
+      font-family: system-ui, sans-serif;
+    }
+
+    /* Center button */
+    .center {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      flex-direction: column;
+    }
+
+    .main-text {
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 400;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 16px 40px;
+      font-size: 18px;
+      border: none;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #ff4b7d, #ff2f68);
+      color: white;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 600;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    /* Heart */
+    .heart {
+      position: absolute;
+      width: 64px;
+      height: 64px;
+      pointer-events: none;
+      filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.25));
+    }
+  </style>
+</head>
+<body>
+  <div class="center">
+    <button type="button" onclick="window.location.href='https://dotpiano.com/xo6NxRXox0r'">Click me ❤️</button>
+    <div class="main-text">You know I am not a cheesy person... <br>And tbh this song is not a veryyy great song of mine <br>Just a little song for you! (we should do a song together later lol)</div>
+  </div>
+
+  <!-- SVG Heart -->
+  <svg class="heart" viewBox="0 0 24 24" fill="#ff2f68">
+    <path d="M12 21s-6.716-4.4-9.5-8.5C.5 9.5 1.5 5.5 5.5 4.5 8 3.9 10.5 5.5 12 7c1.5-1.5 4-3.1 6.5-2.5 4 1 5 5 3 8-2.784 4.1-9.5 8.5-9.5 8.5z"/>
+  </svg>
+
+  <script>
+    const heart = document.querySelector('.heart');
+
+    let t = 0;
+
+    function animate() {
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+
+      // Lissajous curve parameters
+      const a = w * 0.35;
+      const b = h * 0.25;
+      const cx = w / 2;
+      const cy = h / 2;
+
+      const x = cx + a * Math.sin(t * 0.8);
+      const y = cy + b * Math.sin(t * 1.2 + Math.PI / 2);
+
+      const rotation = Math.sin(t * 1.5) * 15;
+      const scale = 1 + Math.sin(t * 2) * 0.05;
+
+      heart.style.transform = `
+        translate(${x}px, ${y}px)
+        translate(-50%, -50%)
+        rotate(${rotation}deg)
+        scale(${scale})
+      `;
+
+      t += 0.01;
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
+</body>
+</html>
